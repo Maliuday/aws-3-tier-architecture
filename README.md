@@ -186,14 +186,29 @@ were deleted to avoid unnecessary AWS charges.
 
 # 👨‍💻 Author
 
-**Uday Mali**
+## Uday Mali
 
-GitHub:
-https://github.com/Maliuday
+🎓 MCA Student | AWS & DevOps Enthusiast | Cloud Learner
 
-LinkedIn:
-(Add Your LinkedIn Profile)
+[![GitHub](https://img.shields.io/badge/GitHub-Maliuday-181717?style=for-the-badge&logo=github)](https://github.com/Maliuday)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Uday%20Mali-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/uday-mali-7aa1b7286/)
 
 ---
 
-⭐ If you found this project helpful, consider giving it a Star!
+## 🤝 Connect With Me
+
+- 🔗 GitHub: https://github.com/Maliuday
+- 💼 LinkedIn: https://www.linkedin.com/in/uday-mali-7aa1b7286/ :contentReference[oaicite:0]{index=0}
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving this repository a **⭐ Star**.
+
+It motivates me to build more real-world **AWS & DevOps** projects and share them with the community.
+
+---
+
+**Thank you for visiting this repository! 🚀**
