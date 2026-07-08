@@ -1,127 +1,199 @@
 # 🚀 AWS 3-Tier Architecture
 
-## 📌 Project Overview
-
-This project demonstrates the deployment of a secure, scalable, and highly available AWS 3-Tier Architecture using Amazon Web Services.
-
-The architecture separates the application into three independent layers:
-
-- Web Tier
-- Application Tier
-- Database Tier
-
-This improves scalability, security, and high availability.
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange?style=for-the-badge&logo=amazonaws)
+![EC2](https://img.shields.io/badge/EC2-Running-yellow?style=for-the-badge&logo=amazonec2)
+![VPC](https://img.shields.io/badge/VPC-Network-blue?style=for-the-badge)
+![Auto Scaling](https://img.shields.io/badge/Auto%20Scaling-Enabled-success?style=for-the-badge)
+![RDS](https://img.shields.io/badge/Amazon-RDS-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
 
-# 🏗️ Architecture
+# 📌 Project Overview
+
+This project demonstrates the deployment of a secure, scalable, and highly available **AWS 3-Tier Architecture** using Amazon Web Services.
+
+The architecture separates the application into three independent layers:
+
+- 🌐 Web Tier
+- ⚙️ Application Tier
+- 🗄️ Database Tier
+
+The project follows AWS best practices by using **Public & Private Subnets**, **Application Load Balancers**, **Auto Scaling Groups**, and **Amazon RDS**.
+
+---
+
+# 🏗 Architecture
 
 ```
                      Internet
                          │
                          ▼
-           Internet Facing Load Balancer
+            Public Application Load Balancer
                          │
-              Auto Scaling Group (Web Tier)
-                         │
-              Internal Load Balancer
-                         │
-        Auto Scaling Group (Application Tier)
-                         │
-                    Amazon RDS
+        ┌────────────────┴────────────────┐
+        ▼                                 ▼
+   Web Server 1                     Web Server 2
+     (ASG)                            (ASG)
+        │
+        ▼
+      Internal ALB
+        │
+   ┌────┴────┐
+   ▼         ▼
+ App Server 1   App Server 2
+    (ASG)          (ASG)
+        │
+        ▼
+   Amazon RDS (MySQL)
 ```
 
 ---
 
-# ☁️ AWS Services Used
+# 📸 Project Screenshots
 
-- Amazon EC2
+## 🔹 VPC Resource Map
+
+> Upload your VPC Resource Map screenshot here.
+
+```
+architecture/vpc-resource-map.png
+```
+
+---
+
+## 🔹 Auto Scaling Groups
+
+> Upload your Auto Scaling screenshot here.
+
+```
+architecture/auto-scaling-group.png
+```
+
+---
+
+## 🔹 GitHub Repository
+
+> Upload your GitHub Repository screenshot here.
+
+```
+architecture/github-repository.png
+```
+
+---
+
+# ☁ AWS Services Used
+
 - Amazon VPC
 - Public Subnets
 - Private Subnets
+- Route Tables
 - Internet Gateway
 - NAT Gateway
-- Route Tables
-- Security Groups
-- Bastion Host
-- Application Load Balancer (Public)
-- Application Load Balancer (Internal)
-- Target Groups
+- EC2
+- Nginx
+- Application Load Balancer
+- Internal Application Load Balancer
 - Auto Scaling Groups
 - Amazon RDS
-- Nginx
-- Linux
-
----
-
-# 📁 Architecture Components
-
-## Web Tier
-
-- Internet Facing Application Load Balancer
-- Auto Scaling Group
-- Nginx Web Server
-
-## Application Tier
-
-- Internal Application Load Balancer
-- Auto Scaling Group
-- PHP Application
-
-## Database Tier
-
-- Amazon RDS MySQL
-
----
-
-# 🔒 Security
-
-- Public and Private Subnets
 - Security Groups
-- Bastion Host for secure SSH access
-- Internal Load Balancer for Application Tier
-- Database deployed in Private Subnet
 
 ---
 
-# 🚀 Features
+# ⚙ Infrastructure Components
 
-- Highly Available Architecture
-- Multi-AZ Deployment
-- Auto Scaling
-- Load Balancing
-- Secure Network Design
-- Production Style Architecture
-- Scalable Infrastructure
+| Layer | Service |
+|--------|---------|
+| Web Layer | EC2 + Nginx |
+| Load Balancer | Application Load Balancer |
+| Application Layer | EC2 |
+| Database Layer | Amazon RDS |
+| Scaling | Auto Scaling Group |
+| Networking | VPC |
+| Security | Security Groups |
 
 ---
 
-# 📚 Skills Demonstrated
+# 🔐 Security Features
 
-- AWS Networking
-- Linux
-- EC2
-- VPC
-- Auto Scaling
-- Application Load Balancer
-- Target Groups
+- Private Application Servers
+- Private Database
 - Security Groups
-- Route Tables
-- NAT Gateway
+- Public & Private Route Tables
+- Multi Availability Zone Deployment
 - Internet Gateway
-- Nginx
-- Cloud Architecture
+- NAT Gateway
 
 ---
 
-# 🎯 Outcome
+# 📈 High Availability
 
-Successfully deployed a production-style AWS 3-Tier Architecture using core AWS services while implementing networking, load balancing, auto scaling, and secure communication between application layers.
+✅ Multi-AZ Deployment
+
+✅ Application Load Balancer
+
+✅ Auto Scaling Groups
+
+✅ Highly Available Web Tier
+
+✅ Private Database Layer
 
 ---
 
-## 👨‍💻 Author
+# 📂 Repository Structure
+
+```
+aws-3-tier-architecture/
+│
+├── architecture/
+│   ├── vpc-resource-map.png
+│   ├── auto-scaling-group.png
+│   └── github-repository.png
+│
+├── README.md
+└── .gitignore
+```
+
+---
+
+# 📚 Learning Outcomes
+
+- Designing AWS VPC
+- Creating Public & Private Subnets
+- Configuring Route Tables
+- Deploying EC2 Instances
+- Installing Nginx
+- Configuring Load Balancers
+- Configuring Auto Scaling Groups
+- Connecting Amazon RDS
+- Secure Network Design
+- High Availability Architecture
+
+---
+
+# 💰 Cost Optimization
+
+After completing the project, all AWS resources including:
+
+- EC2 Instances
+- Load Balancers
+- Auto Scaling Groups
+- NAT Gateway
+
+were deleted to avoid unnecessary AWS charges.
+
+---
+
+# 👨‍💻 Author
 
 **Uday Mali**
 
-Learning AWS | DevOps | Cloud Computing
+GitHub:
+https://github.com/Maliuday
+
+LinkedIn:
+(Add Your LinkedIn Profile)
+
+---
+
+⭐ If you found this project helpful, consider giving it a Star!
